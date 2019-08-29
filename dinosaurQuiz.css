@@ -1,0 +1,163 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    display:flex;
+    justify-content:center;
+}
+p{
+    font-weight: 400;
+    color:snow;
+    font-size:px;
+}
+
+article{
+    background-color: olivedrab;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin:auto;
+    flex-direction: column;
+}
+header{
+    width: 100%;
+    height:100px; 
+     display: flex;
+    justify-content: center;
+    background-color: snow;
+}
+h1{
+    color:olivedrab;
+    font-family: 'Lacquer', sans-serif;
+    font-weight: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+.quiz-section{
+    width: 75%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}.questions{
+    color: white;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px 0px;
+}
+.answers{
+    padding: 10px 0px 0px 25px;
+    margin:5px 0px;
+}
+input{
+    display: none;
+}
+label{
+    position: relative;
+    cursor: pointer;
+    padding:5px 10px 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    -o-transition: all 0.4s ease-in;
+    -webkit-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+}
+label:hover{
+    background-color: snow;
+    color:olivedrab;
+}
+label:hover:after{
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: olivedrab;
+    left:15px;
+    margin: 0px 10px; 
+    position:absolute;
+}
+label:hover:before{
+    border:3px olivedrab solid;
+}
+label:before{
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background-color: none;
+    border: 3px snow solid;
+    margin: 0px 10px; 
+}
+input:checked + label{
+    padding: 5px 15px;
+    background:snow;
+    color:olivedrab;
+    font-weight: 400;
+}
+input:checked + label:before{
+    display:none;
+}
+input:checked + label:hover:after{
+    display: none;
+}
+.buttonContent{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px 20px 0px;
+}
+button{
+    position: relative;
+    padding: 5px 25px;
+    border: none;
+    color: olivedrab;
+    background-color: snow;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    border-radius: 3px;
+    font-weight: 400;
+    cursor: pointer;
+    z-index: 20;
+}
+button:before{
+    content:" ";
+    width:100%;
+    height:3px;
+    background-color:olivedrab;
+    position: absolute;
+    left:0;
+    bottom:0;
+    transform: scaleX(0);
+    transition: transform 0.7s;
+}
+button:hover:before{
+    transform: scaleX(1);
+}
+
+h2{
+    font-weight: 400;
+}
+.scoreContainer{
+    margin:0px 0px 40px 0px;
+    width: 100%;
+    height: 75px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lacquer', sans-serif;
+    font-size: 32px;
+    background-color: palegoldenrod;
+}
+.scoreContainer p{
+    color: olivedrab;
+}
